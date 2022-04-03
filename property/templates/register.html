@@ -1,0 +1,33 @@
+
+
+{% block content %}
+
+    <h1>Sign up below</h1>
+
+    <style> 
+        h5{
+            color:red;
+
+        }
+
+    </style>
+
+    {% for message in messages %}
+    <h3>{{message}}</h3>
+    {% endfor %}
+
+    <form method='POST' action="{% url 'register' %}">
+        {% csrf_token %}
+        <p>Username:</p>
+        <input type="text" class="form-control" id="username" name="username">
+        <p>Email:</p>
+        <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com">
+        <p>Password:</p>
+        <input type="password" class="form-control" id="password" name="password">
+        <p>Repeat Password:</p>
+        <input type="password" class="form-control" id="password2" name="password2">
+    <br>
+        <input type='submit' />
+    </form>
+
+{% endblock %}

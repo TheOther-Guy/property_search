@@ -1,0 +1,26 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+    <div class='container mt-0 pt-0'>
+        <div class='row'>
+            <div class='col-md-1'>
+                <h3>Information</h3>
+                <p class='text-justify'>
+                    how are you doing today?
+                    this is a test page
+                    how are you doing today?
+                    this is a test page
+                </p>
+            </div>
+            <div class='col-lg-6' style="width: 1200px;">
+                <h3 class='text-center'>Geo Map</h3>
+                    {{ m | safe}}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+{% endblock %}

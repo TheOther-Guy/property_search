@@ -1,0 +1,34 @@
+{% extends 'partials/base.html' %}
+
+{% block content %}
+
+{% for message in messages %}
+<h3>{{message}}</h3>
+{% endfor %}
+<nav class="navbar navbar-light bg-white justify-content-center">
+
+    <form class="form-inline" method="get" action="{% url 'melissa'%}">
+     <div align='center'><input class="form-control mr-lg-20" type="text"  placeholder="Enter your address..." name='user_address'>
+      <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search for location</button>
+    </form>
+</nav>
+<div class='d-flex p-0'>
+    <div class="d-flex flex-row">
+        </div>
+        <div class="p-6 mr-0" style="width: 1200px; height: 600px">
+                {{ m | safe}}
+        </div>
+        <div class="table" style="width: 200px; height: 600px">
+          <table class="table">
+            {{ html | safe }}
+          </table>
+        </div>
+            
+              
+    </div>
+</div>
+   
+
+
+
+{% endblock %}
