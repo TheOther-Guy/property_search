@@ -133,3 +133,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' 
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# adding the path for GDAL
+GDAL_LIBRARY_PATH = r'C:\Users\Smile2DeaTH\anaconda3\envs\super\Lib\site-packages\osgeo'
